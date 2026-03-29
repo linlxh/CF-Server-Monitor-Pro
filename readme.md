@@ -52,46 +52,23 @@
 3. 进入该数据库的 **Console (控制台)**，执行以下 SQL 语句来初始化表结构：
 
 ```sql
-CREATE TABLE IF NOT EXISTS servers (
-  id TEXT PRIMARY KEY,
-  name TEXT,
-  cpu TEXT,
-  ram TEXT,
-  disk TEXT,
-  load_avg TEXT,
-  uptime TEXT,
-  last_updated INTEGER,
-  ram_total TEXT,
-  net_rx TEXT,
-  net_tx TEXT,
-  net_in_speed TEXT,
-  net_out_speed TEXT,
-  os TEXT,
-  cpu_info TEXT,
-  arch TEXT,
-  boot_time TEXT,
-  ram_used TEXT,
-  swap_total TEXT,
-  swap_used TEXT,
-  disk_total TEXT,
-  disk_used TEXT,
-  processes TEXT,
-  tcp_conn TEXT,
-  udp_conn TEXT,
-  country TEXT,
-  ip_v4 TEXT,
-  ip_v6 TEXT,
-  server_group TEXT DEFAULT '默认分组',
-  price TEXT DEFAULT '',
-  expire_date TEXT DEFAULT '',
-  bandwidth TEXT DEFAULT '',
-  traffic_limit TEXT DEFAULT '',
-  secret TEXT
+-- 创建服务器节点表
+CREATE TABLE servers (
+    id TEXT PRIMARY KEY,
+    name TEXT,
+    cpu TEXT, ram TEXT, disk TEXT, load_avg TEXT, uptime TEXT, last_updated INTEGER,
+    ram_total TEXT, net_rx TEXT, net_tx TEXT, net_in_speed TEXT, net_out_speed TEXT,
+    os TEXT, cpu_info TEXT, arch TEXT, boot_time TEXT, ram_used TEXT, swap_total TEXT, 
+    swap_used TEXT, disk_total TEXT, disk_used TEXT, processes TEXT, tcp_conn TEXT, udp_conn TEXT, 
+    country TEXT, ip_v4 TEXT, ip_v6 TEXT,
+    server_group TEXT DEFAULT '默认分组', price TEXT DEFAULT '', expire_date TEXT DEFAULT '', 
+    bandwidth TEXT DEFAULT '', traffic_limit TEXT DEFAULT ''
 );
 
+-- 创建全局设置表
 CREATE TABLE IF NOT EXISTS settings (
-  key TEXT PRIMARY KEY, 
-  value TEXT
+    key TEXT PRIMARY KEY,
+    value TEXT
 );
 ```
 
