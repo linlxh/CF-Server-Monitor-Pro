@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS settings (
 5. **定制面板**：在后台最上方的“🛠️ 全局设置”中，你可以修改网站标题，并自由开关首页的各种元素显示。
 
   https://imgapi.cn/api.php?fl=dongman&=4k   api接口可实现背景图片自动轮换   
-  参考：https://tanzhen.a624587332.workers.dev 
+  
 
 ##如何使用电报机器人通知：
 
